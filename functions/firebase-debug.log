@@ -1,0 +1,61 @@
+[debug] [2022-07-26T17:53:51.652Z] ----------------------------------------------------------------------
+[debug] [2022-07-26T17:53:51.653Z] Command:       /Users/yukstormei/.nvm/versions/node/v16.15.1/bin/node /Users/yukstormei/.nvm/versions/node/v16.15.1/bin/firebase functions:shell
+[debug] [2022-07-26T17:53:51.653Z] CLI Version:   11.3.0
+[debug] [2022-07-26T17:53:51.653Z] Platform:      darwin
+[debug] [2022-07-26T17:53:51.653Z] Node Version:  v16.15.1
+[debug] [2022-07-26T17:53:51.655Z] Time:          Tue Jul 26 2022 13:53:51 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-07-26T17:53:51.655Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-26T17:53:51.687Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-26T17:53:51.687Z] > authorizing via signed-in user (yukstormei@gmail.com)
+[debug] [2022-07-26T17:53:51.687Z] [iam] checking project chatterbox-yuki for permissions ["firebase.projects.get"]
+[debug] [2022-07-26T17:53:51.688Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatterbox-yuki:testIamPermissions [none]
+[debug] [2022-07-26T17:53:51.688Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatterbox-yuki:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-26T17:53:51.890Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatterbox-yuki:testIamPermissions 200
+[debug] [2022-07-26T17:53:51.891Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatterbox-yuki:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-26T17:53:51.912Z] [functions] Using node@16 from host.
+[debug] [2022-07-26T17:53:51.914Z] defaultcredentials: writing to file /Users/yukstormei/.config/firebase/yukstormei_gmail_com_application_default_credentials.json
+[debug] [2022-07-26T17:53:51.915Z] DEBUG: Setting GAC to /Users/yukstormei/.config/firebase/yukstormei_gmail_com_application_default_credentials.json
+[debug] [2022-07-26T17:53:51.915Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatterbox-yuki/adminSdkConfig [none]
+[debug] [2022-07-26T17:53:52.244Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatterbox-yuki/adminSdkConfig 200
+[debug] [2022-07-26T17:53:52.244Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatterbox-yuki/adminSdkConfig {"projectId":"chatterbox-yuki","databaseURL":"https://chatterbox-yuki-default-rtdb.firebaseio.com","storageBucket":"chatterbox-yuki.appspot.com","locationId":"us-central"}
+[debug] [2022-07-26T17:53:52.274Z] [functions] Watching "/Users/yukstormei/Desktop/chatterbox/functions" for Cloud Functions...
+[debug] [2022-07-26T17:53:52.282Z] Validating nodejs source
+[debug] [2022-07-26T17:53:52.898Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-07-26T17:53:52.899Z] Building nodejs source
+[debug] [2022-07-26T17:53:52.899Z] Analyzing nodejs backend spec
+[debug] [2022-07-26T17:53:52.900Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-07-26T17:53:53.100Z] Serving at port 9005
+
+[debug] [2022-07-26T17:53:53.148Z] Got response from /__/functions.yaml {"endpoints":{"detectEvilUsers":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/chatterbox-yuki/databases/(default)/documents/messages/{msgId}"},"retry":false},"labels":{},"entryPoint":"detectEvilUsers"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-07-26T17:53:53.152Z] shutdown requested via /__/quitquitquit
+
+[debug] [2022-07-26T17:53:53.155Z] [functions[us-central1-detectEvilUsers]] function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions: Loaded functions: detectEvilUsers 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage 
